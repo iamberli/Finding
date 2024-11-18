@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicativo - Achados e Perdidos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<header>
+  <div class="header-content">
+    <a href="index.html" title="Clique para deslogar e volte à tela inicial">
+      <img src="Finding.png" alt="Logo" class="logo">
+    </a>
+    <p style="display:inline; margin-left: 10px; font-size: 14px; color: #555;">
+      Para deslogar, clique na logo e volte à tela inicial.
+    </p>
+    <h2>Achados e Perdidos</h2>
+    <nav>
+      <a href="profile.html">Perfil</a>
+    </nav>
+  </div>  
+</header>
+<body>
+  <main>
+    <h1>Aplicativo</h1>
+    <h2>Adicionar Item</h2>
+    <div class="form-group">
+      <label for="item-name">Nome do Item:</label>
+      <input id="item-name" type="text" placeholder="Nome do item encontrado" required>
+    </div>
+    <div class="form-group">
+      <label for="found-location">Local onde foi encontrado:</label>
+      <input id="found-location" type="text" placeholder="Informe o local" required>
+    </div>
+    <div class="form-group">
+      <label for="drop-location">CEP onde foi deixado:</label>
+      <input id="drop-location" type="text" placeholder="Digite o CEP" required>
+    </div>
+    <div class="form-group">
+      <label for="drop-number">Número do local onde foi deixado:</label>
+      <input id="drop-number" type="text" placeholder="Digite o número" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantidade:</label>
+      <input id="quantity" type="number" placeholder="Informe a quantidade" required>
+    </div>
+    <button onclick="addItem()">Adicionar Item</button>
+    <p id="add-message"></p>
+
+    <h2>Buscar Item</h2>
+    <div class="form-group">
+      <label for="search-query">Nome do Item:</label>
+      <input id="search-query" type="text" placeholder="Digite o nome do item para buscar">
+    </div>
+    <button onclick="searchItems()">Buscar</button>
+    <div id="results"></div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Achados e Perdidos. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

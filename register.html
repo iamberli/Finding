@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="Finding.png" alt="Logo" class="logo">
+      </a>
+      <h2>Achados e Perdidos</h2>
+      <nav>
+        <a href="login.html">Login</a>
+        <a href="app.html" id="app-link" style="display: none;">Aplicativo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Crie sua conta</h1>
+
+    <form onsubmit="event.preventDefault(); registerUser();">
+      <div class="form-group">
+        <label for="register-fullname">Nome Completo:</label>
+        <input id="register-fullname" type="text" placeholder="Seu nome completo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-email">E-mail:</label>
+        <input id="register-email" type="email" placeholder="Seu e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-cpf">CPF:</label>
+        <input id="register-cpf" type="text" placeholder="123.456.789-01" maxlength="14" oninput="formatCPF(this)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-phone">Telefone:</label>
+        <input id="register-phone" type="text" placeholder="(22) 99251-1147" maxlength="14" oninput="formatPhone(this)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-address">Endereço:</label>
+        <input id="register-address" type="text" placeholder="Seu endereço completo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-username">Usuário:</label>
+        <input id="register-username" type="text" placeholder="Escolha um nome de usuário" required>
+      </div>
+
+      <div class="form-group">
+        <label for="register-password">Senha:</label>
+        <div class="password-container">
+          <input id="register-password" type="password" placeholder="Digite uma senha" required>
+          <span id="eye-icon-register-password" class="eye-icon" onclick="togglePassword('register-password')">&#128062;</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="register-confirm-password">Confirme a Senha:</label>
+        <div class="password-container">
+          <input id="register-confirm-password" type="password" placeholder="Confirme sua senha" required>
+          <span id="eye-icon-register-confirm-password" class="eye-icon" onclick="togglePassword('register-confirm-password')">&#128062;</span>
+        </div>
+      </div>
+
+      <button type="submit">Registrar</button>
+
+      <p id="register-message"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Achados e Perdidos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

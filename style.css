@@ -1,0 +1,187 @@
+/* Resetando margens e preenchimento para evitar espaçamentos indesejados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #010f1e;
+  color: white;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header .logo {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+
+header h2 {
+  flex-grow: 1;
+  font-size: 24px;
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do conteúdo principal */
+main {
+  flex: 1;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+/* Página de Login */
+main h1 {
+  font-size: 32px;
+  color: #010f1e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Estilo para o campo de senha */
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 40px; /* Espaço para o ícone de olho */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: #010f1e;
+  transition: color 0.3s ease;
+}
+
+.eye-icon:hover {
+  color: #007bff;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #010f1e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #010f1e;
+}
+
+/* Estilo das mensagens */
+p {
+  color: #007bff;
+  text-align: center;
+}
+
+p a {
+  color: #010f1e;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #010f1e;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+.image-section {
+  text-align: center;
+  margin-top: 20px; /* Ajuste o espaçamento superior, se necessário */
+}
+
+.image {
+  max-width: 100%;  /* Faz a imagem ocupar toda a largura disponível */
+  height: auto;  /* Mantém a proporção da imagem */
+}
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  header h2 {
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav a {
+    margin: 10px 0;
+  }
+}
